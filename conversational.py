@@ -30,6 +30,7 @@ tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-large", padding_si
 model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-large")
 
 step = 0
+chat_history_ids=[]
 while True:
     user_input = input(">> User:")
     if(user_input.endswith("exit")):
