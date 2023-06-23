@@ -1,8 +1,11 @@
 import openai
 import panel as pn
+import os
+from dotenv import load_dotenv, find_dotenv
 
-openai.api_key = "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"
-openai.Model.list() # Verify that you can connect to the API
+_ = load_dotenv(find_dotenv()) # read local .env file
+
+openai.api_key  = os.getenv('OPENAI_API_KEY')
 pn.extension()
 panels = []
 
