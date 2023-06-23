@@ -1,0 +1,62 @@
+{
+    "part number": [
+    "EEETK1A471UP",
+    "B987654321",
+    "ABC123XYZ",
+    "DEF456GHI",
+    "JKL789MNO",
+    "PQR987STU",
+    "MNO654XYZ",
+    "ZYX321CBA",
+    "KLM789XYZ",
+    "UVW456ABC"
+    ],
+    "manufacturer name": [
+    "Vishay",
+    "Panasonic",
+    "Texas Instruments",
+    "Intel",
+    "Sony",
+    "Samsung",
+    "Microchip",
+    "NXP",
+    "ON Semiconductor",
+    "Infineon"
+    ],
+    "part description": [
+    "Cap 470uF 20% 200mOhm 10V@85C 0.27Arms@85C SMT (10.5 x 12 x 10.5mm) 125C Aluminum Electrolytic Active",
+    "Mohammad 470uF 20% 200mOhm 10V@85C 0.27Arms@85C SMT (10.5 x 12 x 10.5mm) 125C Aluminum Electrolytic Active",
+    "IC Chip 16-bit Microcontroller, 64KB Flash, 4KB RAM",
+    "Resistor 10k Ohm 5% Tolerance 1/8W 0805 SMD",
+    "LED Red, 2.1V Forward Voltage, 20mA Forward Current",
+    "Diode Schottky 1A 20V SOD-123",
+    "Transistor NPN 100mA 50V SOT-23",
+    "Inductor 10uH 10% 1.2A 0805 SMD",
+    "Connector USB Type-C",
+    "Fuse 2A 250V 5x20mm"
+    ],
+    "feature name": [
+    "Minimum Operating Temperature",
+    "Maximum Operating Temperature",
+    "Package Type",
+    "Operating Frequency",
+    "Storage Capacity",
+    "Input Voltage",
+    "Output Voltage",
+    "Resistance",
+    "Current Rating",
+    "Contact Material"
+    ],
+    "feature value": [
+    "-40",
+    "-200",
+    "QFN-32",
+    "16MHz",
+    "64GB",
+    "3.3V",
+    "5V",
+    "1k Ohm",
+    "1A",
+    "Gold"
+    ]
+    }
