@@ -1,5 +1,5 @@
 {
-    "part number": [
+    "PartNumber": [
         "EEETK1A471UP",
         "B987654321",
         "ABC123XYZ",
@@ -11,7 +11,7 @@
         "KLM789XYZ",
         "UVW456ABC"
     ],
-    "manufacturer name": [
+    "ManufacturerName": [
         "Vishay",
         "Panasonic",
         "Texas Instruments",
@@ -23,7 +23,7 @@
         "ON Semiconductor",
         "Infineon"
     ],
-    "part description": [
+    "PartDescription": [
         "Cap 470uF 20% 200mOhm 10V@85C 0.27Arms@85C SMT (10.5 x 12 x 10.5mm) 125C Aluminum Electrolytic Active",
         "Mohammad 470uF 20% 200mOhm 10V@85C 0.27Arms@85C SMT (10.5 x 12 x 10.5mm) 125C Aluminum Electrolytic Active",
         "IC Chip 16-bit Microcontroller, 64KB Flash, 4KB RAM",
@@ -35,7 +35,7 @@
         "Connector USB Type-C",
         "Fuse 2A 250V 5x20mm"
     ],
-    "feature name": [
+    "FeatureName": [
         "Minimum Operating Temperature",
         "Maximum Operating Temperature",
         "Package Type",
@@ -47,7 +47,7 @@
         "Current Rating",
         "Contact Material"
     ],
-    "feature value": [
+    "FeatureValue": [
         "-40",
         "-200",
         "100",

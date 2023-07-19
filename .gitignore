@@ -13,3 +13,10 @@ my_awesome_qa_model/checkpoint-500/tokenizer.json
 my_awesome_qa_model/checkpoint-500/trainer_state.json
 my_awesome_qa_model/checkpoint-500/training_args.bin
 my_awesome_qa_model/checkpoint-500/vocab.txt
+tapas_sqa_base/tapas_sqa_base/bert_config.json
+tapas_sqa_base/tapas_sqa_base/model.ckpt.data-00000-of-00001
+tapas_sqa_base/tapas_sqa_base/model.ckpt.index
+tapas_sqa_base/tapas_sqa_base/model.ckpt.meta
+tapas_sqa_base/tapas_sqa_base/README.txt
+tapas_sqa_base/tapas_sqa_base/vocab.txt
+tapas_sqa_base.zip
