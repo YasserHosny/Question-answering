@@ -6,7 +6,8 @@ def load_data_from_db(rowsCount):
     # Execute the SQL query
     query = f"""
     SELECT *
-    FROM (SELECT *
+    FROM (SELECT "PART NUMBER", DESCRIPTION, "Product Line", SUPPLIER, "MANUFACTURER NAME", DATASHEET, "FEATURE NAME", "FEATURE VALUE", "FEATURE UNIT", 
+    "AVG PRICE", "MIN PRICE"
         FROM VIEW_DATA_PART
         ORDER BY COM_ID) table_data
     FETCH FIRST {rowsCount} ROWS ONLY
@@ -55,4 +56,4 @@ def exec_query_over_db(query):
     # Close the cursor and connection
     cursor.close()
     connection.close()
-    return csvRows
+    return csvRows, columns
