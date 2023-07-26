@@ -21,6 +21,7 @@ def qa():
         bot_response = get_answer_from_table(user_input)
     elif model_name == "gpt":
         bot_response = apply_gpt_model(user_input)
+    
     #print(bot_response)
     response = jsonify({'bot_response': bot_response})
     response.headers.add('Access-Control-Allow-Origin', '*')

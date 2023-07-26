@@ -20,3 +20,6 @@ tapas_sqa_base/tapas_sqa_base/model.ckpt.meta
 tapas_sqa_base/tapas_sqa_base/README.txt
 tapas_sqa_base/tapas_sqa_base/vocab.txt
 tapas_sqa_base.zip
+qa_paramdata/__pycache__/
+qa_paramdata/__pycache__/db_data_handle.cpython-311.pyc
+qa_paramdata/__pycache__/gpt_solution_qa.cpython-311.pyc
