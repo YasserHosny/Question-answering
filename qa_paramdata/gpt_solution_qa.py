@@ -13,25 +13,14 @@ jsonRows, csvRows, columns = load_data_from_db(1)
 def apply_gpt_model(query):
     prompt = """Ignore any previous conversations. Please regard the following table columns: {}
 
-    The table name is VIEW_DATA_PART. Use ' as the quote character. Quote column aliases with ". Write a PL/SQL query to answer the following question: 
+    The table name is VIEW_DATA_PART. Use ' as the quote character. Quote column aliases with ". Write a MS SQL Server query to answer the following question: 
     ''
     {}
     ''
     """.format(columns, query)
     print(prompt)
 
-    request = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=prompt,
-        temperature=0.2,
-        max_tokens=3500
-    )
-    sql_query = request.choices[0].text
-    print(request)
-    #remove any characters frp, sq_query before "SELECT" word
-    select_index = sql_query.find("SELECT")
-    if select_index != -1:
-        sql_query = sql_query[select_index:]
+    sql_query = getQueryFromChatGPT(prompt)
 
     print("===> {}: {}\n".format(query, sql_query)) 
 
@@ -42,8 +31,28 @@ def apply_gpt_model(query):
         print(f"An error occurred: {str(e)}")
         rows = []
         cols = []
+        # Retry get query from ChatGPT
+        sql_query = getQueryFromChatGPT(prompt)
+        rows, cols = exec_query_over_db(sql_query)
 
     return rows, cols
+
+def getQueryFromChatGPT(prompt):
+    request = openai.Completion.create(
+        model="text-davinci-003",
+        prompt=prompt,
+        temperature=0.2,
+        max_tokens=3500
+    )
+    sql_query = request.choices[0].text
+    print(request)
+
+    # Remove any characters before the "SELECT" word in the SQL query
+    select_index = sql_query.find("SELECT")
+    if select_index != -1:
+        sql_query = sql_query[select_index:]
+
+    return sql_query
 
 def convert_to_table(rows, cols):
     # Start building the HTML table
