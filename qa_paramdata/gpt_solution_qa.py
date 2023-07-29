@@ -3,7 +3,7 @@ import pandas as pd
 import json
 from dotenv import load_dotenv
 import os
-from db_data_handle import load_data_from_db, exec_query_over_db
+from db_data_handle import load_data_from_db, exec_query_over_db, parse_sql_query
 
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY2')
@@ -28,14 +28,14 @@ def apply_gpt_model(query):
         rows, cols = exec_query_over_db(sql_query)
     except Exception as e:
         # Handle the exception
-        print(f"An error occurred: {str(e)}")
+        print(f"An error occurred(gpt_solution_qa): {str(e)}")
         rows = []
         cols = []
         # Retry get query from ChatGPT
         sql_query = getQueryFromChatGPT(prompt)
         rows, cols = exec_query_over_db(sql_query)
 
-    return rows, cols
+    return rows, cols, sql_query
 
 def getQueryFromChatGPT(prompt):
     request = openai.Completion.create(
