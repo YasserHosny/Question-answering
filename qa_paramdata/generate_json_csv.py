@@ -2,9 +2,9 @@ import cx_Oracle
 import json
 import csv
 import pandas as pd
-from db_data_handle import load_data_from_db
+from db_data_handle import load_data_from_db_VIEW_DATA_PART
 
-jsonRows, csvRows, columns = load_data_from_db()
+jsonRows, csvRows, columns = load_data_from_db_VIEW_DATA_PART()
 
 # Save the data as JSON
 with open('VIEW_DATA_PART.json', 'w') as file:

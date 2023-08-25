@@ -1,13 +1,15 @@
 import csv
 import pyodbc
 import json
+import os
 
 # Connect to the database
-server = 'transimdb-prod.be2231f9be26.database.windows.net' # Replace with your SQL Server name
-database = 'MOVE_VP_New' # Replace with your database name
-username = 'transim-contributor' # Replace with your username
-password = 'K0oLT0ols5473Ng%NEER' # Replace with your password
-driver= '{ODBC Driver 17 for SQL Server}' # Replace with your driver name
+# Replace with your SQL Server name
+server = 'transimdb-prod.be2231f9be26.database.windows.net'
+database = 'MOVE_VP_New'  # Replace with your database name
+username = os.getenv('MSSQL_USERNAME')  # Replace with your username
+password = os.getenv('MSSQL_PASSWORD')  # Replace with your password
+driver = '{ODBC Driver 17 for SQL Server}'  # Replace with your driver name
 
 # Create the connection string
 conn_str = f"DRIVER={driver};SERVER={server};DATABASE={database};UID={username};PWD={password}"

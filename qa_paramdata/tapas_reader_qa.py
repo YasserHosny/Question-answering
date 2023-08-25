@@ -1,7 +1,7 @@
 from transformers import pipeline, TapasTokenizer, TapasForQuestionAnswering
 import torch
 import json
-from db_data_handle import load_data_from_db
+from db_data_handle import load_data_from_db_VIEW_DATA_PART
 
 
 model_name = "google/tapas-large-finetuned-wtq"
@@ -12,7 +12,7 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 # load the model and tokenizer into a question-answering pipeline
 pipe = pipeline("table-question-answering",  model=model, tokenizer=tokenizer, device=device)
 
-jsonRows, csvRows, columns = load_data_from_db(100)
+jsonRows, csvRows, columns = load_data_from_db_VIEW_DATA_PART(100)
 
 def get_answer_from_table(query):
     answers = pipe(table=jsonRows, query=query)
